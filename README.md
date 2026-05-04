@@ -1,7 +1,7 @@
-# MySQL 8.0 설치 가이드
+# MySQL 8.0 설치 및 데이터 이행 가이드
 
-Oracle Linux 7.9 환경에서 MySQL 8.0 Community Server 설치 가이드입니다.
-MariaDB 잔재 제거부터 보안 초기화, 방화벽/SELinux 설정까지 전 과정을 다룹니다.
+Oracle Linux 7.9 환경에서 MySQL 8.0 Community Server 설치 및
+Oracle 19c HR 스키마 데이터 이행 가이드입니다.
 
 ---
 
@@ -19,9 +19,10 @@ MariaDB 잔재 제거부터 보안 초기화, 방화벽/SELinux 설정까지 전
 
 ## 설치 순서
 
-| 순서 | 문서 |
-|------|------|
-| 1 | [MySQL 8.0 설치](./1.%20MySQL%208.0%20설치.md) |
+| 순서 | 문서 | 설명 |
+|------|------|------|
+| 1 | [MySQL 8.0 설치](./1.%20MySQL%208.0%20설치.md) | MariaDB 제거 / MySQL 설치 / 보안 초기화 / 방화벽 설정 |
+| 2 | [Oracle HR 스키마 MySQL 이행](./2.%20Oracle%20HR%20스키마%20MySQL%20이행.md) | Python 기반 DDL 생성 / 데이터 이행 / 검증 |
 
 ---
 
@@ -31,4 +32,8 @@ MariaDB 잔재 제거부터 보안 초기화, 방화벽/SELinux 설정까지 전
 - SELinux Enforcing 환경에서의 설치 및 설정
 - firewalld 3306 포트 개방
 - mysql_secure_installation 보안 초기화
+- Python(cx_Oracle + mysql-connector)을 활용한 Oracle → MySQL 데이터 이행
+- Oracle Data Dictionary 기반 DDL 자동 생성
+- 테이블별 건수 검증 포함
 - Access denied 트러블슈팅 포함
+
