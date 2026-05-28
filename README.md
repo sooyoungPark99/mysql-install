@@ -28,12 +28,8 @@ Oracle 19c HR 스키마 데이터 이행 가이드입니다.
 
 ## 주요 특징
 
-- MariaDB 잔재 제거 후 MySQL 8.0 설치
-- SELinux Enforcing 환경에서의 설치 및 설정
-- firewalld 3306 포트 개방
+- MySQL 공식 Repo 등록 후 최신 버전 설치
 - mysql_secure_installation 보안 초기화
-- Python(cx_Oracle + mysql-connector)을 활용한 Oracle → MySQL 데이터 이행
-- Oracle Data Dictionary 기반 DDL 자동 생성
-- 테이블별 건수 검증 포함
-- Access denied 트러블슈팅 포함
-
+- SELinux Enforcing 환경에서의 설치
+- firewalld 3306 포트 개방
+- 트러블슈팅 포함 (Access denied 초기화 방법)
